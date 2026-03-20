@@ -1,20 +1,15 @@
--Overview <br>
-Developed a high-performance RESTful API and a dynamic React frontend designed to handle large datasets through Server-Side <br>Pagination. Unlike basic client-side slicing, this system ensures minimal memory overhead by fetching only the necessary <br>data "chunks" from the database, making it capable of handling millions of records without performance degradation.
-<br><br>
--Key Features <br>
-Efficient Data Fetching: Implemented SQL-based LIMIT and OFFSET logic to ensure the backend only processes the specific rows<br> requested by the user.
-<br>
--Dynamic UI Components: Built a responsive React interface with real-time state management, allowing users to navigate <br>through thousands of items seamlessly.
-<br>
-Smart Navigation Logic: Included "First," "Last," "Next," and "Previous" controls with auto-disabling states to prevent<br> invalid API calls.<br>
+Project Title: React Product Pagination <br>
+Description: A lightweight, responsive React application that demonstrates efficient server-side data fetching and pagination. The project retrieves and displays a paginated inventory of products using the public DummyJSON API. It ensures an optimal user experience by implementing loading states and strict boundary controls for navigation.
 
-Loading State Optimization: Integrated a "Skeleton" or "Loader" UI to maintain layout stability and improve perceived <br>performance during network requests.<br><br>
+Key Features:<br>
 
---Technical Stack<br>
-Frontend: React.js, Functional Components (Hooks), CSS3 (BEM Methodology).<br>
+Server-Side Pagination: Dynamically calculates API skip and limit parameters to only load the data required for the current page, reducing network payload and improving performance.
+State Management: Utilizes React Hooks (useState and useEffect) to manage item data, loading states, current page tracking, and total page calculations.
+Resilient UI Controls: "Previous" and "Next" navigation buttons are automatically disabled during data fetches or when the user reaches the absolute first or last pages, preventing broken API calls.
+Loading Feedback: Displays a clear loading indicator to the user while asynchronous API requests are being processed.
+Tech Stack:<br>
 
-Backend: Node.js, Express.js.<br>
-
-Database Logic: Relational database optimization (SQL) using pagination queries.<br>
-
-API Design: RESTful architecture with structured JSON responses containing metadata (total count, current page, total pages).<br>
+Frontend Framework: React.js (Functional Components, Hooks)
+Styling: Vanilla CSS
+Data Fetching: Native JavaScript fetch API
+External API: DummyJSON (https://dummyjson.com/products)
