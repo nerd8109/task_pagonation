@@ -1,16 +1,20 @@
-# React + Vite
+-Overview
+Developed a high-performance RESTful API and a dynamic React frontend designed to handle large datasets through Server-Side <br>Pagination. Unlike basic client-side slicing, this system ensures minimal memory overhead by fetching only the necessary <br>data "chunks" from the database, making it capable of handling millions of records without performance degradation.
+<br><br>
+-Key Features
+Efficient Data Fetching: Implemented SQL-based LIMIT and OFFSET logic to ensure the backend only processes the specific rows<br> requested by the user.
+<br>
+-Dynamic UI Components: Built a responsive React interface with real-time state management, allowing users to navigate <br>through thousands of items seamlessly.
+<br>
+Smart Navigation Logic: Included "First," "Last," "Next," and "Previous" controls with auto-disabling states to prevent<br> invalid API calls.<br>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Loading State Optimization: Integrated a "Skeleton" or "Loader" UI to maintain layout stability and improve perceived <br>performance during network requests.<br><br>
 
-Currently, two official plugins are available:
+--Technical Stack
+Frontend: React.js, Functional Components (Hooks), CSS3 (BEM Methodology).<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Backend: Node.js, Express.js.<br>
 
-## React Compiler
+Database Logic: Relational database optimization (SQL) using pagination queries.<br>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+API Design: RESTful architecture with structured JSON responses containing metadata (total count, current page, total pages).<br>
